@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &653738685
+--- !u!1 &1119619596
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,37 +127,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 653738687}
-  - component: {fileID: 653738686}
+  - component: {fileID: 1119619598}
+  - component: {fileID: 1119619597}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &653738686
+--- !u!114 &1119619597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653738685}
+  m_GameObject: {fileID: 1119619596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb88c76548e69646a1c7d374e5f022b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f529e7aee97a114d8a94d0bdb691377, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameQuitter
---- !u!4 &653738687
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  pawn: {fileID: 2040264151}
+  teleportKey: 116
+  moveForward: 119
+  moveBackward: 115
+  rotateClockwise: 100
+  rotateCounterclockwise: 97
+  moveUp: 273
+  moveDown: 274
+  moveLeft: 276
+  moveRight: 275
+  turbo1: 304
+  turbo2: 303
+  quitKey: 27
+--- !u!4 &1119619598
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653738685}
+  m_GameObject: {fileID: 1119619596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5903, y: -0.30917, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -265,9 +278,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2040264150}
   - component: {fileID: 2040264149}
-  - component: {fileID: 2040264147}
   - component: {fileID: 2040264146}
-  - component: {fileID: 2040264145}
+  - component: {fileID: 2040264151}
+  - component: {fileID: 2040264152}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -275,23 +288,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2040264145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040264144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71fc575b502831249ba282addba394ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteMovement
-  minX: -4
-  maxX: 4
-  minY: -4
-  maxY: 4
-  keyPress: 32
 --- !u!114 &2040264146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,18 +302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
   theRenderer: {fileID: 2040264149}
   spriteColor: {r: 1, g: 1, b: 1, a: 0}
---- !u!114 &2040264147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040264144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb88c76548e69646a1c7d374e5f022b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameQuitter
 --- !u!212 &2040264149
 SpriteRenderer:
   serializedVersion: 2
@@ -392,10 +376,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2040264151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040264144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac7fde875d0e474b8a75351047fb9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPawn
+  minX: -5
+  maxX: 5
+  minY: -5
+  maxY: 5
+  mover: {fileID: 2040264152}
+--- !u!114 &2040264152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040264144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abc4639d3af21845be138c98efd2b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkullMover
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1719415414}
-  - {fileID: 653738687}
   - {fileID: 2040264150}
+  - {fileID: 1119619598}
