@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerPawn : Pawn
 {
     public SkullMover mover;
+    
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,52 +17,52 @@ public class PlayerPawn : Pawn
         
     }
 
-    public override void MoveForward()
+    public override void MoveForward() // Capital M in Pawn
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.moveForward(); // Lowercase m in SkullMover
             
         }
     }
 
-    public override void MoveBackward()
+    public override void MoveBackward() // M
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.moveBackward(); // m
         }
     }
 
-    public override void RotateClockwise()
+    public override void RotateClockwise() // Upper Case R
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.rotateClockwise(); // lowercase r
         }
     }
 
-    public override void RotateCounterclockwise()
+    public override void RotateCounterclockwise() // Upper Case R
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.rotateCounterclockwise(); // lowercase r
         }
     }
 
-    public override void MoveUp()
+    public override void MoveUp() // M
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.Move(); // m
         }
     }
 
-    public override void MoveDown()
+    public override void MoveDown() // M
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.Move(); // m
         }
     }
 
@@ -76,7 +78,7 @@ public class PlayerPawn : Pawn
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.moveRight();
         }
     }
 

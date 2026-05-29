@@ -6,7 +6,9 @@ public abstract class Pawn : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
-    public abstract void MoveForward();
+   
+
+    public abstract void MoveForward(); // Capital M matching pawn override
 
     public abstract void MoveBackward();
 

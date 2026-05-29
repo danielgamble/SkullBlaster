@@ -71,26 +71,31 @@ public class PlayerController : Controller // Change parent to Controller
         if (Input.GetKeyDown(moveUp))
         {
             Debug.Log("Moved Up");
+            pawn.MoveUp();
         }
 
         if (Input.GetKeyDown(moveDown))
         {
             Debug.Log("Moved Down");
+            pawn.MoveDown();
         }
 
         if (Input.GetKeyDown(moveLeft))
         {
             Debug.Log("Moved Left");
+            pawn.MoveLeft();
         }
 
         if (Input.GetKeyDown(moveRight))
         {
             Debug.Log("Moved Right");
+            pawn.MoveRight();
         }
 
         if (Input.GetKey(turbo1) || Input.GetKey(turbo2))
         {
             Debug.Log("Turbo Engaged");
+            
         }
 
         if (Input.GetKeyDown(quitKey))
