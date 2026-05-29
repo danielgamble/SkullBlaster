@@ -8,7 +8,7 @@ public class PlayerPawn : Pawn
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mover = GetComponent<SkullMover>();
+        mover = GetComponent<SkullMover>(); // Makes sure that the SkullMover component is available to the PlayerPawn.
     }
 
     // Update is called once per frame
@@ -17,9 +17,9 @@ public class PlayerPawn : Pawn
         
     }
 
-    public override void MoveForward() // Capital M in Pawn
+    public override void MoveForward() // Capital M in Pawn - helping to match the names so I don't keep getting them mixed up.
     {
-        if (mover != null)
+        if (mover != null) // If the mover exists, carry out moveForward();
         {
             mover.moveForward(); // Lowercase m in SkullMover
             
@@ -92,7 +92,7 @@ public class PlayerPawn : Pawn
 
     public override void Teleport()
     {
-        mover.Teleport(minX, maxX, minY, maxY);
+        mover.Teleport(minX, maxX, minY, maxY); // defining minX, maxX etc...
     }
 
 }

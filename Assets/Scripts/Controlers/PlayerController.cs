@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerController : Controller // Change parent to Controller
 {
+    // This is where we will make the button selection available inside the Unity interface for each player movement.
+    // Using KeyCode is what allows the button to be selected.
+
     // Teleport Key
     public KeyCode teleportKey; // T
 
@@ -33,21 +36,21 @@ public class PlayerController : Controller // Change parent to Controller
     // Update is called once per frame
     void Update()
     {
-        MakeDecisions();
+        MakeDecisions(); // This is calling the MakeDecisions function each frame to keep it going while the game is open.
     }
 
     public override void MakeDecisions()
     {
-        if (Input.GetKeyDown(teleportKey))
+        if (Input.GetKeyDown(teleportKey)) // Checking if the teleport key is pressed.
         {
-            Debug.Log("Teleport");
-            pawn.Teleport();
+            Debug.Log("Teleport"); // Tell the console the teleport button has been pressed.
+            pawn.Teleport(); // Tells the player to execute the teleport function defined in SkullMover.cs
         }
 
-        if (Input.GetKey(moveForward))
+        if (Input.GetKey(moveForward)) // Checking if the moveForward key is down.
         {
             Debug.Log("Moving Forward");
-            pawn.MoveForward();
+            pawn.MoveForward(); // Tells the player to execute the MoveForward function defined in SkullMover.cs
         }
 
         if (Input.GetKey(moveBackward))
