@@ -105,6 +105,7 @@ public class PlayerController : Controller // Change parent to Controller
         if (Input.GetKeyDown(quitKey))
         {
             Debug.Log("Quit Game");
+            Application.Quit();
         }
 
 
