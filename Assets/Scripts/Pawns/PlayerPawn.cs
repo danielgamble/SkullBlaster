@@ -54,7 +54,7 @@ public class PlayerPawn : Pawn
     {
         if (mover != null)
         {
-            mover.Move(); // m
+            mover.moveUp(); // m
         }
     }
 
@@ -62,23 +62,31 @@ public class PlayerPawn : Pawn
     {
         if (mover != null)
         {
-            mover.Move(); // m
+            mover.moveDown(); // m
         }
     }
 
-    public override void MoveLeft()
+    public override void MoveLeft() // M
     {
         if (mover != null)
         {
-            mover.Move();
+            mover.moveLeft(); // m
         }
     }
 
-    public override void MoveRight()
+    public override void MoveRight() // M
     {
         if (mover != null)
         {
-            mover.moveRight();
+            mover.moveRight(); // m
+        }
+    }
+
+    public override void Turbo() // M
+    {
+        if (mover != null)
+        {
+            mover.turbo(); // m
         }
     }
 
@@ -86,4 +94,6 @@ public class PlayerPawn : Pawn
     {
         mover.Teleport(minX, maxX, minY, maxY);
     }
+
 }
+

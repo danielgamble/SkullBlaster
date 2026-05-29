@@ -7,6 +7,7 @@ public class SkullMover : MonoBehaviour
     private Transform tf;
     public float speed;
     public float rotateSpeed;
+    public float turboSpeed;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,13 +49,32 @@ public class SkullMover : MonoBehaviour
 
     public void moveRight() // Lowercase m
     {
-        Debug.Log("You are moving forward");
+        Debug.Log("You teleported right");
         tf.position = tf.position + (Vector3.right); // I created a public float in Pawn.cs for speed but it is not available 
     }
 
-    public void Move() // Not sure how exactly I need to set this up to work properly.
+    public void moveLeft() // Lowercase m
     {
-        Debug.Log("You are moving");
+        Debug.Log("You teleported left");
+        tf.position -= tf.position + (Vector3.right); // I created a public float in Pawn.cs for speed but it is not available 
+    }
+
+    public void moveUp() // Lowercase m
+    {
+        Debug.Log("You teleported forward");
+        tf.position = tf.position + (Vector3.up); // I created a public float in Pawn.cs for speed but it is not available 
+    }
+
+    public void moveDown() // Lowercase m
+    {
+        Debug.Log("You teleported backward");
+        tf.position -= tf.position + (Vector3.up); // I created a public float in Pawn.cs for speed but it is not available 
+    }
+
+    public void turbo() // Not sure how exactly I need to set this up to work properly.
+    {
+        Debug.Log("TurboSpeed");
+        tf.position = tf.position + (tf.up * (speed * 2) * Time.deltaTime);
 
     }
 

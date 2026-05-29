@@ -95,6 +95,7 @@ public class PlayerController : Controller // Change parent to Controller
         if (Input.GetKey(turbo1) || Input.GetKey(turbo2))
         {
             Debug.Log("Turbo Engaged");
+            pawn.Turbo();
             
         }
 
