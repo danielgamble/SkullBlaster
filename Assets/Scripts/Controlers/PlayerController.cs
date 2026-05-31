@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : Controller // Change parent to Controller
 {
+
+    public int maxHealth; // Creating the variable to store max health information.
+    public int currentHealth = 1; // This will keep track of health as gameplay progresses.
+
     // This is where we will make the button selection available inside the Unity interface for each player movement.
     // Using KeyCode is what allows the button to be selected.
 
@@ -27,16 +32,31 @@ public class PlayerController : Controller // Change parent to Controller
     // Quit key
     public KeyCode quitKey;
 
+    private Rigidbody2D rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+       // COME BACK AND UNCOMMENT THIS LINE!!! currentHealth = maxHealth; // Sets currentHealth to the value that the designer has maxHealth set to
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         MakeDecisions(); // This is calling the MakeDecisions function each frame to keep it going while the game is open.
+    }
+
+    void FixedUpdate()
+    {
+
+    }
+
+    public void ChangeHealth (int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
     }
 
     public override void MakeDecisions()
