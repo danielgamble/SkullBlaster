@@ -95,5 +95,7 @@ public class PlayerPawn : Pawn
         mover.Teleport(minX, maxX, minY, maxY); // defining minX, maxX etc...
     }
 
+    
+
 }
 

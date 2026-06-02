@@ -3,18 +3,20 @@ using UnityEngine;
 public class HealthCollectible : MonoBehaviour
 {
    
+
+    /*
     void OnTriggerEnter2D(Collider2D other) // Unity specific function that detects a Ridgidbody hitting
                                             // a collider.
     {
 
-        Debug.Log("You touched the shroom!!! "); 
+        Debug.Log("You touched the shroom!!! ");
 
-        PlayerController controller = other.GetComponent<PlayerController>(); // Attaches PlayerController script to allow us to change the value 
-                                            // when a collision occurs.
+        Health health = GetComponent<Health>(); // Attaches PlayerController script to allow us to change the value 
+                                             // when a collision occurs.
 
-        if (controller != null)
+        if (health != null)
         {
-            controller.ChangeHealth(1);
+            health.Heal(10);
             Destroy(gameObject);
             Debug.Log("Gobble Gobble");
         }
@@ -24,5 +26,5 @@ public class HealthCollectible : MonoBehaviour
         }
 
     }
-
+  */
 }

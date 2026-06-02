@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : Controller // Change parent to Controller
 {
 
-    public int maxHealth; // Creating the variable to store max health information.
-    public int currentHealth = 1; // This will keep track of health as gameplay progresses.
+ 
 
     // This is where we will make the button selection available inside the Unity interface for each player movement.
     // Using KeyCode is what allows the button to be selected.
@@ -32,14 +31,14 @@ public class PlayerController : Controller // Change parent to Controller
     // Quit key
     public KeyCode quitKey;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D rb; // declaring the rigidbody2D variable
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       // COME BACK AND UNCOMMENT THIS LINE!!! currentHealth = maxHealth; // Sets currentHealth to the value that the designer has maxHealth set to
+      //currentHealth = maxHealth; // Sets currentHealth to the value that the designer has maxHealth set to
 
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); // Getting access to the Rigidbody2D component
     }
 
     // Update is called once per frame
@@ -53,71 +52,67 @@ public class PlayerController : Controller // Change parent to Controller
 
     }
 
-    public void ChangeHealth (int amount)
-    {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
-    }
+    
 
     public override void MakeDecisions()
     {
         if (Input.GetKeyDown(teleportKey)) // Checking if the teleport key is pressed.
         {
-            Debug.Log("Teleport"); // Tell the console the teleport button has been pressed.
+           // Debug.Log("Teleport"); // Tell the console the teleport button has been pressed.
             pawn.Teleport(); // Tells the player to execute the teleport function defined in SkullMover.cs
         }
 
         if (Input.GetKey(moveForward)) // Checking if the moveForward key is down.
         {
-            Debug.Log("Moving Forward");
+           // Debug.Log("Moving Forward");
             pawn.MoveForward(); // Tells the player to execute the MoveForward function defined in SkullMover.cs
         }
 
         if (Input.GetKey(moveBackward))
         {
-            Debug.Log("Moving Backward");
+           // Debug.Log("Moving Backward");
             pawn.MoveBackward();
         }
 
         if (Input.GetKey(rotateClockwise))
         {
-            Debug.Log("Rotating Clockwise");
+           // Debug.Log("Rotating Clockwise");
             pawn.RotateClockwise();
         }
 
         if (Input.GetKey(rotateCounterclockwise))
         {
-            Debug.Log("Rotating Counterclockwise");
+           // Debug.Log("Rotating Counterclockwise");
             pawn.RotateCounterclockwise();
         }
 
         if (Input.GetKeyDown(moveUp))
         {
-            Debug.Log("Moved Up");
+           // Debug.Log("Moved Up");
             pawn.MoveUp();
         }
 
         if (Input.GetKeyDown(moveDown))
         {
-            Debug.Log("Moved Down");
+           // Debug.Log("Moved Down");
             pawn.MoveDown();
         }
 
         if (Input.GetKeyDown(moveLeft))
         {
-            Debug.Log("Moved Left");
+           // Debug.Log("Moved Left");
             pawn.MoveLeft();
         }
 
         if (Input.GetKeyDown(moveRight))
         {
-            Debug.Log("Moved Right");
+           // Debug.Log("Moved Right");
             pawn.MoveRight();
         }
 
         if (Input.GetKey(turbo1) || Input.GetKey(turbo2))
         {
-            Debug.Log("Turbo Engaged");
+           // Debug.Log("Turbo Engaged");
             pawn.Turbo();
             
         }
