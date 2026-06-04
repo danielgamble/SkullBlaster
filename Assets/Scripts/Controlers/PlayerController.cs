@@ -28,6 +28,9 @@ public class PlayerController : Controller // Change parent to Controller
     public KeyCode turbo1;
     public KeyCode turbo2;
 
+    // Fire Key
+    public KeyCode shoot;
+
     // Quit key
     public KeyCode quitKey;
 
@@ -121,6 +124,12 @@ public class PlayerController : Controller // Change parent to Controller
         {
             Debug.Log("Quit Game");
             Application.Quit();
+        }
+
+        if (Input.GetKeyDown(shoot))
+        {
+            Debug.Log("Shot Fired!!!");
+            Shooter.shoot();
         }
 
 
