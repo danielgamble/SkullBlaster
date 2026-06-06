@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProjectileShoot : MonoBehaviour
 {
-    public GameObject projectilePrefab;
+    /* public GameObject projectilePrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,5 +17,5 @@ public class ProjectileShoot : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         }
-    }
+    } */
 }

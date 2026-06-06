@@ -249,7 +249,7 @@ PolygonCollider2D:
       - {x: 0.235, y: 0.225}
       - {x: 0.155, y: 0.295}
   m_UseDelaunayMesh: 1
---- !u!114 &309720145
+--- !u!114 &309720149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,10 +258,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 309720131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ed08ddfab4dce4698125da79916015, type: 3}
+  m_Script: {fileID: 11500000, guid: b1af4066ad4cd6546aa06dc719ad2ab1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShoot
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
   projectilePrefab: {fileID: 3067997322723319304, guid: 0db1aa9bdddebfd4e97a18966ef54358, type: 3}
+  moveSpeed: 5
 --- !u!1 &562729587
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +496,7 @@ PrefabInstance:
       addedObject: {fileID: 309720140}
     - targetCorrespondingSourceObject: {fileID: 3820344505966132346, guid: 41a4b04fe6ff2c54ab2a15ac90a1fae6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 309720145}
+      addedObject: {fileID: 309720149}
   m_SourcePrefab: {fileID: 100100000, guid: 41a4b04fe6ff2c54ab2a15ac90a1fae6, type: 3}
 --- !u!1 &1119619596
 GameObject:
@@ -507,6 +508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119619598}
   - component: {fileID: 1119619597}
+  - component: {fileID: 1119619599}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -555,6 +557,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1119619599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119619596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1af4066ad4cd6546aa06dc719ad2ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  projectilePrefab: {fileID: 3067997322723319304, guid: 0db1aa9bdddebfd4e97a18966ef54358, type: 3}
+  moveSpeed: 5
 --- !u!1 &1192551109
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1192551110
 SpriteRenderer:
   serializedVersion: 2

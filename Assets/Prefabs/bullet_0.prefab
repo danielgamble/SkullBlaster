@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2520655933487482110}
   - component: {fileID: 3061743889810186379}
   - component: {fileID: 7638882339968064974}
-  - component: {fileID: 4868147039262662322}
   m_Layer: 0
   m_Name: bullet_0
   m_TagString: Projectile
@@ -172,16 +171,3 @@ PolygonCollider2D:
       - {x: 0.044999998, y: -0.044999998}
       - {x: 0.044999998, y: 0.044999998}
   m_UseDelaunayMesh: 1
---- !u!114 &4868147039262662322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3067997322723319304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1af4066ad4cd6546aa06dc719ad2ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  moveSpeed: 5

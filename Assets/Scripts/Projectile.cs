@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectile : Shooter // This is a child of the shooter class
 {
-
+    public GameObject projectilePrefab;
     public float moveSpeed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,13 +15,21 @@ public class Projectile : Shooter // This is a child of the shooter class
     void Update()
     {
 
-        transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
+        
         
     }
 
     public override void shoot()
     {
-       
+
         // Projectile shooting code goes here..
+        {
+            
+                Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+                Debug.Log("Bang!!!");
+           
+
+        }
+
     }
 }
