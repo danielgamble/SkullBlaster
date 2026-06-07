@@ -128,11 +128,11 @@ public class PlayerController : Controller // Change parent to Controller
 
         if (Input.GetKeyDown(shoot))
         {
-            Projectile projectile = GetComponent<Projectile>();
-            if (projectile != null)
+            Shooter shooter = GetComponent<Shooter>();
+            if (shooter != null)
             {
                 Debug.Log("Shot Fired!!!");
-                projectile.shoot();
+                shooter.Shoot();
             }
 
             else

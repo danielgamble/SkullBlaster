@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1666807551144558478}
   - component: {fileID: 707241013594805004}
   - component: {fileID: 8347943293907132232}
+  - component: {fileID: -5849846865864632923}
+  - component: {fileID: 4565629240053710569}
+  - component: {fileID: -2572937799631538524}
   m_Layer: 0
   m_Name: Zombie Star1_0
   m_TagString: Enemy
@@ -151,3 +154,39 @@ PolygonCollider2D:
       - {x: 0.24499999, y: -0.095}
       - {x: 0.285, y: 0.005}
   m_UseDelaunayMesh: 1
+--- !u!114 &-5849846865864632923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769883073029462744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b09767682d6fc47a200c86470fa227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathVolume
+--- !u!114 &4565629240053710569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769883073029462744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2728c18a5fe36bb4799c68c7fb49f079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootZombie
+--- !u!114 &-2572937799631538524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769883073029462744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6dfaafc66a3814fb2e52e55eedcd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathDestroy

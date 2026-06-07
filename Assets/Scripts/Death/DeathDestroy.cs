@@ -12,7 +12,7 @@ public class DeathDestroy : Death // this is a child of Death
                                             // a collider.
     {
 
-        Debug.Log("You touched the Zombie Star!!! ");
+        Debug.Log("Collision Commenced!!! ");
 
         Health health = GetComponent<Health>(); // Attaches Health script to allow us to change the value 
                                                 // when a collision occurs.
