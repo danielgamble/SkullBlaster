@@ -3,7 +3,7 @@ using UnityEngine;
 public class ProjectileShoot : Shooter
 {
     public GameObject projectilePrefab;
-    public float shootSpeed = 50;
+    public float shootSpeed = 20;
     // Optional reference to the player transform; if assigned, projectiles will spawn at the player's position.
     public Transform player;
     public float spawnOffset = 0.5f;

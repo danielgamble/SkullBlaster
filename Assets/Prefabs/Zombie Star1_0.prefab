@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5849846865864632923}
   - component: {fileID: 4565629240053710569}
   - component: {fileID: -2572937799631538524}
+  - component: {fileID: -6050065914861260082}
   m_Layer: 0
   m_Name: Zombie Star1_0
   m_TagString: Enemy
@@ -190,3 +191,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6dfaafc66a3814fb2e52e55eedcd96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathDestroy
+--- !u!114 &-6050065914861260082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769883073029462744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e2ffaefefb20e4aa6d39acf9aae381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  player: {fileID: 0}
