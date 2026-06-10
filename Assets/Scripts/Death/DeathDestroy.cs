@@ -23,7 +23,10 @@ public class DeathDestroy : Death // this is a child of Death
             
 
             Debug.Log("THE ZOMBIE STAR CHOMPED YOUR BRAINS!!!"); // tell the console that you were chomped.
-          
+
+            
+
+
         }
         else
         {

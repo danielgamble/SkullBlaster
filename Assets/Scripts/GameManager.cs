@@ -1,8 +1,9 @@
-using System.Collections.Generic;
+ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
     public GameObject objectToSpawn; // giving option to select spawn component in inspector window
 
     public Transform ZombieSpawnPoint; // giving option to select spawn point for zombie star in inspector window
@@ -10,6 +11,16 @@ public class GameManager : MonoBehaviour
     public List<DeathVolume> deathVolumeList = new List<DeathVolume>(); // this is going to create a new list to keep track of each new deathVolume
 
     public static GameManager instance; // the static variable can be accessed by everything like a root component.
+    
+    
+    // Game States
+
+    public GameObject TitleScreenStateObject;
+    public GameObject MainMenuStateObject;
+    public GameObject OptionsScreenStateObject;
+    public GameObject CreditsScreenStateObject;
+    public GameObject GamePlayStateObject;
+    public GameObject GameOverScreenStateObject;
     
     public void Awake()
     {
@@ -38,6 +49,8 @@ public class GameManager : MonoBehaviour
             Instantiate(objectToSpawn, ZombieSpawnPoint.position, ZombieSpawnPoint.rotation); // spawn a zombieStar at the selected ZombieSpawnPoint position.
         }
         
+        ActivateTitleScreen(); // calling the title screen to activate at start of layout
+        
     }
 
     // Update is called once per frame
@@ -45,4 +58,69 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    private void DeactivateAllStates()
+    {
+        // Deactivating all game states
+        TitleScreenStateObject.SetActive(false);
+        MainMenuStateObject.SetActive(false);
+        OptionsScreenStateObject.SetActive(false);
+        CreditsScreenStateObject.SetActive(false);
+        GamePlayStateObject.SetActive(false);
+        GameOverScreenStateObject.SetActive(false);
+    }
+
+    public void ActivateTitleScreen()
+    {
+        // Deactivate all states
+        DeactivateAllStates();
+        // Set only title screen to active
+        TitleScreenStateObject.SetActive(true);
+    }
+    
+    public void ActivateMainMenu()
+    {
+        // Deactivate all states
+        DeactivateAllStates();
+        // Set only title screen to active
+        MainMenuStateObject.SetActive(true);
+    }
+    
+    public void ActivateOptionsScreen()
+    {
+        // Deactivate all states
+        DeactivateAllStates();
+        // Set only options screen to active
+        OptionsScreenStateObject.SetActive(true);
+    }
+    
+    public void ActivateCreditsScreen()
+    {
+        // Deactivate all states
+        DeactivateAllStates();
+        // Set only credits screen to active
+        CreditsScreenStateObject.SetActive(true);
+    }
+    
+    public void ActivateGamplayScreen()
+    {
+        // Deactivate all states
+        DeactivateAllStates();
+        // Set only game play screen to active
+        GamePlayStateObject.SetActive(true);
+        
+        // Doing anything that is needed to get the game to run
+        // Spawning player / enemies / level
+    }
+    
+    public void ActivateGameOverScreen()
+    {
+        // Deactivate all states
+        DeactivateAllStates();
+        // Set only game over screen to active
+        GameOverScreenStateObject.SetActive(true);
+    }
+
+   
+    
 }

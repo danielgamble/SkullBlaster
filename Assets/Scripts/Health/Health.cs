@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
     // private int test;
     public float maxHealth; // Creating the variable to store max health information.
     public float currentHealth; // This will keep track of health as gameplay progresses.
+    public GameObject PlayerToSpawn; // giving option to attach player to spawn point
+    public Transform RespawnPoint; // instantiating at the respawn game object designated in the inspector
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,11 +40,12 @@ public class Health : MonoBehaviour
 
         // Lose a life when health = 0
         Death death = GetComponent<Death>(); // Getting the death component so we can destroy the player.
-
+        
         if (death != null & currentHealth <=0 ) // if death is there and the currentHealth is 0 or less than 0, call the Die function and display a message in the console.
         {
             death.Die(); // Calling the die function from the Death script.
             Debug.Log("Though you have been eaten, you will be forever missed."); // A message in the console for when the player is eaten.
+            Instantiate(PlayerToSpawn, RespawnPoint.position, RespawnPoint.rotation); 
         }
     }
 
@@ -54,7 +57,7 @@ public class Health : MonoBehaviour
         {
             death.Die(); // call the death function
             Debug.Log("YA DONE BEEN CHOMPED FOOL!!!"); // tell the player they done been chomped in the console.
-            currentHealth = 0; // set currentHealth to 0
+            
         }
     }
 }
