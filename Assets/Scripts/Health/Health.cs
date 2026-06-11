@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -7,8 +8,7 @@ public class Health : MonoBehaviour
     // private int test;
     public float maxHealth; // Creating the variable to store max health information.
     public float currentHealth; // This will keep track of health as gameplay progresses.
-    public GameObject PlayerToSpawn; // giving option to attach player to spawn point
-    public Transform RespawnPoint; // instantiating at the respawn game object designated in the inspector
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,7 +45,13 @@ public class Health : MonoBehaviour
         {
             death.Die(); // Calling the die function from the Death script.
             Debug.Log("Though you have been eaten, you will be forever missed."); // A message in the console for when the player is eaten.
-            Instantiate(PlayerToSpawn, RespawnPoint.position, RespawnPoint.rotation); 
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            // Reload the scene
+            SceneManager.LoadScene(currentSceneIndex);
+
+            
+
         }
     }
 
@@ -57,7 +63,13 @@ public class Health : MonoBehaviour
         {
             death.Die(); // call the death function
             Debug.Log("YA DONE BEEN CHOMPED FOOL!!!"); // tell the player they done been chomped in the console.
+
             
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            // Reload the scene
+            SceneManager.LoadScene(currentSceneIndex);
+          
         }
     }
 }

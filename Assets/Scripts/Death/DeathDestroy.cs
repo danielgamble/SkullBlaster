@@ -1,11 +1,18 @@
 using GLTFast.Schema;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathDestroy : Death // this is a child of Death
 {
     public override void Die() // creating the Die function to destroy the player.
     {
         Destroy(gameObject); // Parameters unity has given us to destroy the player upon death
+                             // Get the index number of the current scene\
+
+        
+        
+
+        
     }
 
     void OnTriggerEnter2D(Collider2D other) // Unity specific function that detects a Ridgidbody hitting
@@ -24,14 +31,8 @@ public class DeathDestroy : Death // this is a child of Death
 
             Debug.Log("THE ZOMBIE STAR CHOMPED YOUR BRAINS!!!"); // tell the console that you were chomped.
 
-            
-
-
         }
-        else
-        {
-            Debug.Log("Poo, I didn't get it."); // if health is not there, display a message that GetComponent failed.
-        }
+        
     }
 
     

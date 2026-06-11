@@ -3,12 +3,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public GameObject PlayerToSpawn; // giving option to attach player to spawn point
+
+    public Transform RespawnPoint; // instantiating at the respawn game object designated in the inspector
+
     public GameObject objectToSpawn; // giving option to select spawn component in inspector window
 
     public Transform ZombieSpawnPoint; // giving option to select spawn point for zombie star in inspector window
    
     public List<DeathVolume> deathVolumeList = new List<DeathVolume>(); // this is going to create a new list to keep track of each new deathVolume
+
+    public List<PlayerVolume> playerVolumeList = new List<PlayerVolume>();
 
     public static GameManager instance; // the static variable can be accessed by everything like a root component.
     
@@ -21,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject CreditsScreenStateObject;
     public GameObject GamePlayStateObject;
     public GameObject GameOverScreenStateObject;
+
     
     public void Awake()
     {
@@ -44,13 +50,8 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (objectToSpawn != null && ZombieSpawnPoint != null) // if the zombieStar and ZombieSpawnPoint exist
-        {
-            Instantiate(objectToSpawn, ZombieSpawnPoint.position, ZombieSpawnPoint.rotation); // spawn a zombieStar at the selected ZombieSpawnPoint position.
-        }
-        
-        ActivateTitleScreen(); // calling the title screen to activate at start of layout
-        
+        ActivateTitleScreen();
+       
     }
 
     // Update is called once per frame
