@@ -1,5 +1,7 @@
  using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // brings in Unity's UI features
+using TMPro; // allows us to change the text as the score changes
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public List<PlayerVolume> playerVolumeList = new List<PlayerVolume>();
 
-    public static GameManager instance; // the static variable can be accessed by everything like a root component.
+    public static GameManager instance; // the static variable can be accessed by everything like a root component
     
     
     // Game States
@@ -27,6 +29,11 @@ public class GameManager : MonoBehaviour
     public GameObject GamePlayStateObject;
     public GameObject GameOverScreenStateObject;
 
+    // Keep track of time and create score
+
+    private float elapsedTime = 0f; // create a float to keep track of the elapsed play time
+    public int Score = 0;
+    public TMP_Text scoreText; // TMP_Text is the equivilent of int, float, GameObject, etc. when using to change variables in the inspector
     
     public void Awake()
     {
@@ -57,7 +64,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        elapsedTime = Time.deltaTime; // set elapsedTime to Time.deltaTime which is already keeping track in the background
+        //Debug.Log("Elapsed Time: " + elapsedTime);
+        scoreText.text = ("Score: " + Score);
     }
 
     private void DeactivateAllStates()

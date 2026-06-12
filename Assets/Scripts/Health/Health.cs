@@ -72,4 +72,24 @@ public class Health : MonoBehaviour
           
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other) // Unity specific function that detects a Ridgidbody hitting
+                                            // a collider.
+    {
+
+        Debug.Log("TakeDamage ");
+
+        Health health = GetComponent<Health>(); // Attaches Health script to allow us to change the value 
+                                                // when a collision occurs.
+
+        if (health != null) // if health is there...
+        {
+            health.TakeDamage(25); // call the chomped function to destroy the player.
+
+
+            Debug.Log(" -25 HP!!!"); // tell the console that you were chomped.
+
+        }
+
+    }
 }

@@ -26,7 +26,7 @@ public class ProjectileShoot : Shooter
         if (projectilePrefab != null) // checking to make sure the projectile prefab is there.
         {
             Instantiate(projectilePrefab, player.position + player.up * spawnOffset, player.rotation); // spawing the projectile at the player position and setting the offset so it spawns slightly in front of the player.
-            Debug.Log("Bang!!!");
+            //Debug.Log("Bang!!!");
 
             var mover = projectilePrefab.GetComponent<ProjectileMover>(); // Calling the projectile mover so the bullet doesn't sit still once spawned.
          

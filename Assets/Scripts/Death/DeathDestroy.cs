@@ -15,25 +15,7 @@ public class DeathDestroy : Death // this is a child of Death
         
     }
 
-    void OnTriggerEnter2D(Collider2D other) // Unity specific function that detects a Ridgidbody hitting
-                                            // a collider.
-    {
-
-        Debug.Log("Collision Commenced!!! ");
-
-        Health health = GetComponent<Health>(); // Attaches Health script to allow us to change the value 
-                                                // when a collision occurs.
-
-        if (health != null) // if health is there...
-        {
-            health.Chomped(); // call the chomped function to destroy the player.
-            
-
-            Debug.Log("THE ZOMBIE STAR CHOMPED YOUR BRAINS!!!"); // tell the console that you were chomped.
-
-        }
-        
-    }
+  
 
     
 }
