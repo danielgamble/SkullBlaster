@@ -8,7 +8,7 @@ public class SpriteChanger : MonoBehaviour
     // Declare our variables
     public SpriteRenderer theRenderer;
     public Color spriteColor; // Variable for our color
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,10 +27,11 @@ public class SpriteChanger : MonoBehaviour
             theRenderer.color = spriteColor;
         }
     }
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
         
     }
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 }

@@ -22,6 +22,13 @@ public class ShootZombie : MonoBehaviour // this is a child of Death
 
             Debug.Log("You shot the Zombie Star!!!"); // tell the console that you shot the zombie star.
 
+            ProjectileImpact projectileImpact = GetComponent<ProjectileImpact>();
+            if (projectileImpact != null)
+            {
+                projectileImpact.PlayImpactAudio();
+            }
+            
+
         }
         else
         {

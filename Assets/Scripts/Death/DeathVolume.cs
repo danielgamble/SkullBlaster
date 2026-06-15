@@ -21,19 +21,5 @@ public class DeathVolume : MonoBehaviour
         }
     }
     
-
-/*private void OnTriggerEnter2D(Collider2D collision) // calling the collider on trigger
-    {
-        Death otherDeathComponent = collision.GetComponent<Death>(); // include death component so the zombie star dies when hit
-
-        if (otherDeathComponent != null) // if Death is there....
-        {
-            otherDeathComponent.Die(); // Call the Die function from the Death script
-            Destroy(gameObject); //  destroy the game object on collision
-            Debug.Log("The Zombie Star Died"); // a message to check if the code is working correctly
-            GameManager.instance.Score++; // calling the game manager when the zombie star dies to add to the score
-            
-        }
-    }*/
 }
 

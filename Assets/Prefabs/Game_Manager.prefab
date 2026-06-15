@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8909031474987704484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2320369385343768169}
+  - component: {fileID: 7150976211464793529}
+  m_Layer: 0
+  m_Name: Game_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2320369385343768169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909031474987704484}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.86689, y: 0.7565, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7150976211464793529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909031474987704484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2142d3800482616488e1b7f5950f02e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  PlayerToSpawn: {fileID: 3820344505966132346, guid: 41a4b04fe6ff2c54ab2a15ac90a1fae6, type: 3}
+  RespawnPoint: {fileID: 8842701360948083298, guid: 0878270eb38b942a3bc99656076000e9, type: 3}
+  objectToSpawn: {fileID: 769883073029462744, guid: 1d5164b472986564da17ea6f74d8d56b, type: 3}
+  ZombieSpawnPoint: {fileID: 5964751696263433527, guid: f0c19c8ad6c9443f2a2971014f57c038, type: 3}
+  TimeToSpawnZombie: 1.5
+  SpawnCountdown: 0
+  deathVolumeList:
+  - {fileID: 0}
+  playerVolumeList:
+  - {fileID: 0}
+  TitleScreenStateObject: {fileID: 8944415859656002316, guid: 2729824afab0c48e2aef8a6bdee33918, type: 3}
+  MainMenuStateObject: {fileID: 5988515661101993591, guid: 6833565dedae14e56bbd89af596409d2, type: 3}
+  OptionsScreenStateObject: {fileID: 7308867232617074032, guid: a98d7957569394b0ab5a90337aca78b0, type: 3}
+  CreditsScreenStateObject: {fileID: 1611622214988020825, guid: 76aad7e93c5c34f34953c9fd809e3909, type: 3}
+  GamePlayStateObject: {fileID: 3879761515301649720, guid: 20b821da4de3f4879bc461f5a8bb8112, type: 3}
+  GameOverScreenStateObject: {fileID: 8759334627482450946, guid: 9e64350d6887144468c2b482c73f0a0e, type: 3}
+  Score: 0
+  scoreText: {fileID: 8108196109436961274, guid: d61b5de4265f84582831c5c8b0076fe9, type: 3}
+  Lives: 3
+  livesText: {fileID: 5187268944381210751, guid: ba9c9200486924fc69b2b71ef0069ff6, type: 3}
