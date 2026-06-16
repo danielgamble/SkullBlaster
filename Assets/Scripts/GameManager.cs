@@ -29,9 +29,10 @@ public class GameManager : MonoBehaviour
 
 
     public int Score = 0; // int to keep track of score as zombies are killed
-    public TMP_Text scoreText; // TMP_Text is the equivilent of int, float, GameObject, etc. when using to change variables in the inspector
+    
+    
     public int Lives = 3; // Sets lives at 3 and can be changed in the inspector
-    public TMP_Text livesText; // Creating a variable to allow us to change the text to reflect the number of lives left
+ 
     
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public void Awake()
@@ -62,9 +63,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
-      
-       
         
         if (Lives <= 0) // if lives are less than or equal to 0
         {
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int amount)
     {
         Score += amount;
-        scoreText.text = "Score: " + Score;
+        
     }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -159,7 +159,8 @@ public class GameManager : MonoBehaviour
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public void LoseLife()
     {
-        livesText.text = "Lives " + Lives;
+        Lives = Lives - 1;
+        
     }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -175,9 +176,10 @@ public class GameManager : MonoBehaviour
     {
         
            
-                SceneManager.LoadScene("GameOver"); // go to the game over screen
-            
-        
+                SceneManager.LoadScene(2); // go to the game over screen
+       
+
+
     }
    
     

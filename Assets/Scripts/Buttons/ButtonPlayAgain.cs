@@ -11,7 +11,7 @@ public class ButtonPlayAgain : MonoBehaviour
         {
             SceneManager.LoadScene(1); // Load the Gameplay screen when the player clicks Play Again.
            // GameManager.instance.Score = 0; // Reset the score to 0
-            GameManager.instance.ReSpawn(); // Respawn the player
+          
             Health health = GetComponent<Health>(); // Access the health component
             
             if (health != null)

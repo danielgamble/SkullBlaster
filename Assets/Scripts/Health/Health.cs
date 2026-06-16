@@ -13,14 +13,24 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth; // Sets currentHealth to the value that the designer has maxHealth set to
-		healthSlider.maxValue = maxHealth; // Set the max value of the slider to maxHealth
-		healthSlider.value = currentHealth; // Set the heath bar value to current HP value
+		
+		
+
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth; // Set the max value of the slider to maxHealth
+            healthSlider.value = currentHealth; // Set the heath bar value to current HP value
+        }
     }
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Update is called once per frame
     void FixedUpdate()
     {
-			healthSlider.value = currentHealth; // Set the health bar value to current HP value
+        if (healthSlider != null)
+        {
+            healthSlider.value = currentHealth; // Set the health bar value to current HP value
+        }
+			
     }
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public void Heal(float amount) // A variable to heal the player when we are ready
@@ -64,8 +74,8 @@ public class Health : MonoBehaviour
 
         if (health != null) // if health is there...
         {
-            health.TakeDamage(25); // call the chomped function to destroy the player.
-            Debug.Log(" -25 HP!!!"); // tell the console that you were chomped.
+            health.TakeDamage(10); // call the chomped function to destroy the player.
+            Debug.Log(" -10 HP!!!"); // tell the console that you were chomped.
 
         }
 

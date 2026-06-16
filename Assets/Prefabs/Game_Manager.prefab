@@ -46,10 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   PlayerToSpawn: {fileID: 3820344505966132346, guid: 41a4b04fe6ff2c54ab2a15ac90a1fae6, type: 3}
   RespawnPoint: {fileID: 8842701360948083298, guid: 0878270eb38b942a3bc99656076000e9, type: 3}
-  objectToSpawn: {fileID: 769883073029462744, guid: 1d5164b472986564da17ea6f74d8d56b, type: 3}
-  ZombieSpawnPoint: {fileID: 5964751696263433527, guid: f0c19c8ad6c9443f2a2971014f57c038, type: 3}
-  TimeToSpawnZombie: 1.5
-  SpawnCountdown: 0
   deathVolumeList:
   - {fileID: 0}
   playerVolumeList:
@@ -59,8 +55,6 @@ MonoBehaviour:
   OptionsScreenStateObject: {fileID: 7308867232617074032, guid: a98d7957569394b0ab5a90337aca78b0, type: 3}
   CreditsScreenStateObject: {fileID: 1611622214988020825, guid: 76aad7e93c5c34f34953c9fd809e3909, type: 3}
   GamePlayStateObject: {fileID: 3879761515301649720, guid: 20b821da4de3f4879bc461f5a8bb8112, type: 3}
-  GameOverScreenStateObject: {fileID: 8759334627482450946, guid: 9e64350d6887144468c2b482c73f0a0e, type: 3}
+  GameOverScreenStateObject: {fileID: 8747143018898517419, guid: 5627af9103e74914e90672362953dba7, type: 3}
   Score: 0
-  scoreText: {fileID: 8108196109436961274, guid: d61b5de4265f84582831c5c8b0076fe9, type: 3}
-  Lives: 3
-  livesText: {fileID: 5187268944381210751, guid: ba9c9200486924fc69b2b71ef0069ff6, type: 3}
+  Lives: 1

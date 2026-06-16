@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 1243862320908655319, guid: 7f7abdf055d72449bb4cca82df5b33f6, type: 3}
+  currentHealth: 100
+  healthSlider: {fileID: 0}
 --- !u!114 &7949462064020209727
 MonoBehaviour:
   m_ObjectHideFlags: 0
