@@ -43,8 +43,8 @@ public class Health : MonoBehaviour
             death.Die(); // Calling the die function from the Death script.
             Debug.Log("Though you have been eaten, you will be forever missed."); // A message in the console for when the player is eaten.
            SceneManager.LoadScene(1);
-			
-			GameManager.instance.Lives = (GameManager.instance.Lives - 1);
+
+            GameManager.instance.LoseLife();
         }
         }
   // -----------------------------------------------------------------------------------------------------------------------------------------------     

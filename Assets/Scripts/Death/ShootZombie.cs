@@ -18,7 +18,7 @@ public class ShootZombie : MonoBehaviour // this is a child of Death
         if (deathDestroy != null) // if deathDestroy is there...
         {
             deathDestroy.Die(); // call the die function to destroy the zombie.
-            GameManager.instance.Score++; // calling the game manager when the zombie star dies to add to the score
+            GameManager.instance.AddScore(5); // calling the game manager when the zombie star dies to add to the score
 
             Debug.Log("You shot the Zombie Star!!!"); // tell the console that you shot the zombie star.
 

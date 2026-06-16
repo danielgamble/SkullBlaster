@@ -60,12 +60,10 @@ public class GameManager : MonoBehaviour
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
       
-        scoreText.text = ("Score: " + Score); // display the string and the variable together to show score
-        livesText.text = ("Lives: " + Lives);
        
         
         if (Lives <= 0) // if lives are less than or equal to 0
@@ -76,7 +74,11 @@ public class GameManager : MonoBehaviour
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-  
+    public void AddScore(int amount)
+    {
+        Score += amount;
+        scoreText.text = "Score: " + Score;
+    }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -155,7 +157,13 @@ public class GameManager : MonoBehaviour
     }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+    public void LoseLife()
+    {
+        livesText.text = "Lives " + Lives;
+    }
+
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     public void ReSpawn()
     {
         Instantiate(PlayerToSpawn, RespawnPoint.position, RespawnPoint.rotation); // spawn the player at the respawn point when health is out
@@ -166,10 +174,9 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         
-            if (Lives <= 0) // if lives are less than or equal to 0....
-            {
-                SceneManager.LoadScene(2); // go to the game over screen
-            }
+           
+                SceneManager.LoadScene("GameOver"); // go to the game over screen
+            
         
     }
    
