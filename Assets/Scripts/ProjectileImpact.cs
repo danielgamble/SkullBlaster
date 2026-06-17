@@ -7,7 +7,7 @@ public class ProjectileImpact : MonoBehaviour
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     private void OnTriggerEnter2D(Collider2D collision) // cannot be collision2D for triggers
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy")) 
         {
             PlayImpactAudio();
 

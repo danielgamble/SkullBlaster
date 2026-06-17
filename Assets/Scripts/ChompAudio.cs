@@ -12,7 +12,7 @@ public class ChompAudio : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public void TriggerChompAudio()
     {
