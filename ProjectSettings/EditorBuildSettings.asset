@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: a3799f842ce2c4985a3c0b3ca15bc303
+  - enabled: 0
+    path: Assets/Scenes/YouDied.unity
+    guid: 3e9a750946004432193d6103ac12e147
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

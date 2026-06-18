@@ -48,13 +48,23 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // makes sure the currentHealth value can not go below 0 or above the maxHealth value.
         Death death = GetComponent<Death>(); // Getting the death component so we can destroy the player.
         
-        if (death != null & currentHealth <=0 ) // if death is there and the currentHealth is 0 or less than 0, call the Die function and display a message in the console.
+        if (death != null & currentHealth <=0 & GameManager.instance.Lives >= 1) // if death is there and the currentHealth is 0 or less than 0, call the Die function and display a message in the console.
         {
             death.Die(); // Calling the die function from the Death script.
             Debug.Log("Though you have been eaten, you will be forever missed."); // A message in the console for when the player is eaten.
            SceneManager.LoadScene(1);
 
             GameManager.instance.LoseLife();
+        }
+        
+        if (death != null & GameManager.instance != null)
+        {
+            if (currentHealth <= 0 & GameManager.instance.Lives <= 0)
+            {
+                death.Die();
+                SceneManager.LoadScene(2);  
+            }
+            
         }
         }
   // -----------------------------------------------------------------------------------------------------------------------------------------------     

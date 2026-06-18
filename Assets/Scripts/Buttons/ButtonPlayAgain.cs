@@ -9,6 +9,7 @@ public class ButtonPlayAgain : MonoBehaviour
     {
         if (GameManager.instance != null)
         {
+            GameManager.instance.GameOverScreenStateObject.SetActive(false);
             SceneManager.LoadScene(1); // Load the Gameplay screen when the player clicks Play Again.
            // GameManager.instance.Score = 0; // Reset the score to 0
           

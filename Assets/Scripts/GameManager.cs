@@ -66,10 +66,10 @@ public class GameManager : MonoBehaviour
 
         
         
-        if (Lives <= 0) // if lives are less than or equal to 0
+       /* if (Lives <= 0) // if lives are less than or equal to 0
         {
             GameOver(); // call the game over script
-        }
+        }*/
     }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -148,13 +148,13 @@ public class GameManager : MonoBehaviour
     
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    public void ActivateGameOverScreen()
+    /*public void ActivateGameOverScreen()
     {
         // Deactivate all states
         DeactivateAllStates();
         // Set only game over screen to active
         GameOverScreenStateObject.SetActive(true);
-    }
+    }*/
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public void LoseLife()
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    public void GameOver()
+    /*public void GameOver()
     {
         
            
@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
        
 
 
-    }
+    } */
 
    
     
