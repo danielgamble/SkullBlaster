@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Projectile
   - TitleScreen
+  - Wall
+  - FireBall
+  - Collectible
   layers:
   - Default
   - TransparentFX

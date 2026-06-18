@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 5375092091231596710}
   - component: {fileID: -8222018727800380977}
   - component: {fileID: -2049437111008418664}
+  - component: {fileID: -5219905235737687136}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -418,3 +419,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5983088928b4e41e7a20b72ef84f1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EdgeWrap
+--- !u!114 &-5219905235737687136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820344505966132346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4ccb2b552ab5644b98c656f675c3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthCollectible

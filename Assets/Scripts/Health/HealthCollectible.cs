@@ -1,30 +1,28 @@
 using UnityEngine;
 
-public class HealthCollectible : MonoBehaviour
+public class HealthCollectible :  MonoBehaviour // Attach to player
 {
    
-
-    
-    void OnTriggerEnter2D(Collider2D other) // Unity specific function that detects a Ridgidbody hitting
-                                            // a collider.
+    private void OnTriggerEnter2D(Collider2D collision) // cannot be collision2D for triggers
     {
-
-        Debug.Log("You touched the shroom!!! ");
-
-        Health health = GetComponent<Health>(); // Attaches PlayerController script to allow us to change the value 
-                                             // when a collision occurs.
-
-        if (health != null)
+        if (collision.gameObject.CompareTag("Collectible"))
         {
-            health.Heal(10);
-            Destroy(gameObject);
-            Debug.Log("Gobble Gobble");
-        }
-        else 
-                {
-            Debug.Log("Poo, I didn't get it.");
+            Health health = GetComponent<Health>();
+            if (health != null)
+            {
+                health.Heal(10);
+            }
+            //Destroy(gameObject);
+
+            
+
+
         }
 
+       
     }
+    
+    
+   
   
 }
