@@ -145,16 +145,6 @@ public class GameManager : MonoBehaviour
         // Doing anything that is needed to get the game to run
         // Spawning player / enemies / level
     }
-    
-    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
-    /*public void ActivateGameOverScreen()
-    {
-        // Deactivate all states
-        DeactivateAllStates();
-        // Set only game over screen to active
-        GameOverScreenStateObject.SetActive(true);
-    }*/
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public void LoseLife()
@@ -172,16 +162,7 @@ public class GameManager : MonoBehaviour
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    /*public void GameOver()
-    {
-        
-           
-                SceneManager.LoadScene(2); // go to the game over screen
-       
-
-
-    } */
-
+   
    
     
 }
